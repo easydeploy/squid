@@ -1,7 +1,7 @@
-FROM tianon/centos:6.5
-MAINTAINER tushar.pokle@gmail.com
+FROM ubuntu
+MAINTAINER neil@cazcade.com
 
-RUN yum install -y squid
+RUN apt-get install -y squid
 ADD squid.conf /etc/squid/squid.conf
 # Make cache dirs 
 RUN squid -z -F
