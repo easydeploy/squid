@@ -1,6 +1,7 @@
-FROM ubuntu
+FROM ubuntu:14.04
 MAINTAINER neil@cazcade.com
 
+RUN apt-get update
 RUN apt-get install -y squid
 ADD squid.conf /etc/squid/squid.conf
 # Make cache dirs 
